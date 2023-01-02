@@ -1,0 +1,19 @@
+#include <stdio.h>
+// function that calculates the minimum no. of resources
+int Resources(int p, int n)
+{
+	int r = 0;
+
+    r = p * (n - 1) + 1;//Condition so that deadlock will not    //occur
+
+	return r;
+}
+// Driver code
+int main()
+{
+    int process,need;
+    printf("Enter the no of process and max need of every process\n");
+    scanf("%d%d",&process,&need);
+    printf("R >= %d",Resources(process, need));
+    return 0;
+}
